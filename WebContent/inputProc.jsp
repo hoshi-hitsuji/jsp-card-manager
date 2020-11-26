@@ -5,6 +5,9 @@
 <!DOCTYPE html>
 <!-- request parameter 값의 인코딩 설정 -->
 <% request.setCharacterEncoding("utf-8"); %>
+<!-- 자바빈 사용 설정 -->
+<jsp:useBean id="regBean" class="jspCardManager.register.RegisterBean"/>
+<jsp:setProperty name="regBean" property="*"/>
 <html>
     <head>
     	<!-- html 페이지의 인코딩 설정 -->
@@ -17,33 +20,34 @@
     <body>
         <section class="container">
         	<!-- 유저로부터 입력받은 값으로 명함 생성 -->
+        	<!-- 자바빈 사용, getProperty로 값을 가져옴 -->
         	<img id="logo" src="res/logo.jpg" alt="kyungsung university logo" />
         	<div id="tm">KYUNGSUNG UNIVERSITY</div>
         	<div id="group8">
         		<div id="name">
-        			<%= request.getParameter("name") %>
+        			<jsp:getProperty property="name" name="regBean"/>
         		</div>
         		<div id="position">
-        			<%= request.getParameter("position") %>
+        			<jsp:getProperty property="position" name="regBean"/>
         		</div>
         	</div>
         	<div id="info">
         		<div class="info-item">
         			<span class="head">T</span>
         			<span>
-        				<%= request.getParameter("tel") %>
+        				<jsp:getProperty property="tel" name="regBean"/>
         			</span>
         		</div>
         		<div class="info-item">
         			<span class="head">E</span>
         			<span>
-        				<%= request.getParameter("email") %>
+        				<jsp:getProperty property="email" name="regBean"/>
         			</span>
         		</div>
         		<div class="info-item">
         			<span class="head">A</span>
         			<span id="addr">
-	        			<%= request.getParameter("addr") %> / <%= request.getParameter("addr2") %>
+	        			<jsp:getProperty property="addr" name="regBean"/> / <jsp:getProperty property="addr2" name="regBean"/>
         			</span>
         		</div>
         	</div>
