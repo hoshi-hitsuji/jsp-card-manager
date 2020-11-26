@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap");
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7fafc;
+    background-image: url(../res/bg2.jpg);
+    background-size: cover;
+    font-family: "Nunito", "Noto Sans KR", sans-serif;
+    align-items: center;
+}
+.container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 15px;
+}
+.glass {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    border: 1px solid white;
+}
+.headline {
+    display: flex;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 1.5em;
+    align-items: center;
+}
+.text {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form .item {
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+}
+.form .name {
+    flex-basis: 6em;
+    font-weight: 500;
+    text-align: right;
+    margin-right: 2em;
+}
+.form .value {
+    flex-grow: 1;
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 0.6em 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#search {
+    flex-basis: 3em;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0.6em 1em;
+    background-color: #48bb78;
+}
+#search img {
+    color: white;
+}
+.form .value:focus {
+    outline: none;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+.invalid {
+    border: 1px solid #f56565;
+}
+.form input[type="submit"] {
+    margin-top: 1em;
+    border-radius: 7px;
+    padding: 0.5rem;
+    font-weight: 500;
+    background-color: #48bb78;
+    color: white;
+}
+.forminput[type="submit"]:hover {
+    background-color: #68d391;
+}
+.forminput[type="submit"]:active {
+    background-color: #38a169;
+}
