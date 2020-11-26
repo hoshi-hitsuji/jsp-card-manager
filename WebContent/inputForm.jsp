@@ -1,18 +1,21 @@
+<!-- 페이지 디렉티브, 언어와 인코딩 설정 -->
 <%@ page language="java"
 	contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8" %>
 <!DOCTYPE html>
 <html>
     <head>
+    	<!-- html 페이지의 인코딩 설정 -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale-1.0" />
         <title>명함</title>
+        <!-- 스타일 적용 -->
         <link href="reset.css" rel="stylesheet" />
         <link href="inputForm.css" rel="stylesheet" />
-        <script src="index.js"></script>
     </head>
     <body>
+    	<!-- glassmorphism 을 적용한 스타일 -->
         <section class="container glass">
+        	<!-- form 구문 사용, submit의 action 설정 -->
             <form class="form" method="post" action="inputProc.jsp">
                 <h1 class="headline">
                     <img
@@ -21,6 +24,7 @@
                     />
                     명함 정보를 입력해주세요
                 </h1>
+                <!-- 유저로부터 입력값 받음 -->
                 <div class="item">
                     <div class="name">이름</div>
                     <input
