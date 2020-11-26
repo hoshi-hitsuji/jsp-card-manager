@@ -1,19 +1,22 @@
+<!-- 페이지 디렉티브, 언어와 인코딩 설정 -->
 <%@ page language="java"
 	contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8" %>
 <!DOCTYPE html>
+<!-- request parameter 값의 인코딩 설정 -->
 <% request.setCharacterEncoding("utf-8"); %>
 <html>
     <head>
+    	<!-- html 페이지의 인코딩 설정 -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale-1.0" />
         <title>명함</title>
+        <!-- 스타일 적용 -->
         <link href="reset.css" rel="stylesheet" />
         <link href="inputProc.css" rel="stylesheet" />
-        <script src="index.js"></script>
     </head>
     <body>
         <section class="container">
+        	<!-- 유저로부터 입력받은 값으로 명함 생성 -->
         	<img id="logo" src="res/logo.jpg" alt="kyungsung university logo" />
         	<div id="tm">KYUNGSUNG UNIVERSITY</div>
         	<div id="group8">
