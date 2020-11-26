@@ -3,4 +3,4 @@ build
 .classpath
 .project
 META-INF
-WEB-INF
+*.class
