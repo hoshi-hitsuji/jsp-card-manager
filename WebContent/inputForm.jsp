@@ -13,7 +13,7 @@
     </head>
     <body>
         <section class="container glass">
-            <form class="form" method="post" action="card.jsp">
+            <form class="form" method="post" action="inputProc.jsp">
                 <h1 class="headline">
                     <img
                         src="res/icons/person.svg"
