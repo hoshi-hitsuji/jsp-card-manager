@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale-1.0" />
         <title>명함</title>
         <link href="reset.css" rel="stylesheet" />
-        <link href="style.css" rel="stylesheet" />
+        <link href="inputForm.css" rel="stylesheet" />
         <script src="index.js"></script>
     </head>
     <body>
@@ -33,24 +33,13 @@
                     />
                 </div>
                 <div class="item">
-                    <div class="name">학과</div>
+                    <div class="name">직책</div>
                     <input
                         class="value"
-                        name="dept"
+                        name="position"
                         type="text"
-                        placeholder="학과"
-                        pattern="[가-힣]+과"
-                        required
-                    />
-                </div>
-                <div class="item">
-                    <div class="name">학번</div>
-                    <input
-                        class="value"
-                        name="num"
-                        type="text"
-                        placeholder="학번"
-                        pattern="[0-9\-]{5,}"
+                        placeholder="직책"
+                        minLength="1"
                         required
                     />
                 </div>
