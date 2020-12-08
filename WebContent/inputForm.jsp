@@ -2,6 +2,12 @@
 <%@ page language="java"
 	contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8" %>
+<%@ include file="consts.jsp" %>
+<%
+String id = request.getParameter("id");
+Boolean isEdit = id != null;
+Card card = new Card(id);
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,7 +23,8 @@
     	<!-- glassmorphism 을 적용한 스타일 -->
         <section class="container glass">
         	<!-- form 구문 사용, submit의 action 설정 -->
-            <form class="form" method="post" action="inputProc.jsp">
+            <form class="form" method="post" action="<%= isEdit ? "editProc.jsp" : "inputProc.jsp" %>">
+            	<input type="hidden" name="id" value="<%=isEdit ? id : ""%>">
                 <h1 class="headline">
                     <img
                         src="res/icons/person.svg"
@@ -35,6 +42,7 @@
                         placeholder="이름"
                         required
                         minlength="2"
+                        value="<%=card.name%>"
                     />
                 </div>
                 <div class="item">
@@ -46,6 +54,7 @@
                         placeholder="직책"
                         minLength="1"
                         required
+                        value="<%=card.position%>"
                     />
                 </div>
                 <div class="item">
@@ -57,6 +66,7 @@
                         placeholder="전화번호"
                         pattern="[0-9\-]{3,}"
                         required
+                        value="<%=card.tel%>"
                     />
                 </div>
                 <div class="item">
@@ -67,6 +77,7 @@
                         type="email"
                         placeholder="이메일"
                         required
+                        value="<%=card.email%>"
                     />
                 </div>
                 <div class="item">
@@ -77,6 +88,7 @@
                         type="text"
                         placeholder="주소"
                         required
+                        value="<%=card.addr%>"
                     />
                 </div>
                 <div class="item">
@@ -87,10 +99,12 @@
                         type="text"
                         placeholder="상세주소"
                         required
+                        value="<%=card.addr2%>"
                     />
                 </div>
                 <input type="submit" />
             </form>
         </section>
+    	<%@ include file="nav.jsp" %>
     </body>
 </html>

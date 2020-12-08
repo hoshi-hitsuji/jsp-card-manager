@@ -2,12 +2,14 @@
 <%@ page language="java"
 	contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8" %>
+<%@ include file="consts.jsp" %>
 <!DOCTYPE html>
 <!-- request parameter 값의 인코딩 설정 -->
 <% request.setCharacterEncoding("utf-8"); %>
-<!-- 자바빈 사용 설정 -->
-<jsp:useBean id="regBean" class="jspCardManager.register.RegisterBean"/>
-<jsp:setProperty name="regBean" property="*"/>
+<%
+String id = request.getParameter("id");
+Card card = new Card(id);
+%>
 <html>
     <head>
     	<!-- html 페이지의 인코딩 설정 -->
@@ -16,7 +18,7 @@
         <!-- 스타일 적용 -->
         <link href="reset.css" rel="stylesheet" />
         <link href="global.css" rel="stylesheet" />
-        <link href="cardProc.css" rel="stylesheet" />
+        <link href="cardView.css" rel="stylesheet" />
     </head>
     <body>
         <section class="container">
@@ -26,32 +28,33 @@
         	<div id="tm">KYUNGSUNG UNIVERSITY</div>
         	<div id="group8">
         		<div id="name">
-        			<jsp:getProperty property="name" name="regBean"/>
+        			<%= card.name %>
         		</div>
         		<div id="position">
-        			<jsp:getProperty property="position" name="regBean"/>
+        			<%= card.position %>
         		</div>
         	</div>
         	<div id="info">
         		<div class="info-item">
         			<span class="head">T</span>
         			<span>
-        				<jsp:getProperty property="tel" name="regBean"/>
+        			<%= card.tel %>
         			</span>
         		</div>
         		<div class="info-item">
         			<span class="head">E</span>
         			<span>
-        				<jsp:getProperty property="email" name="regBean"/>
+        			<%= card.email %>
         			</span>
         		</div>
         		<div class="info-item">
         			<span class="head">A</span>
         			<span id="addr">
-	        			<jsp:getProperty property="addr" name="regBean"/> / <jsp:getProperty property="addr2" name="regBean"/>
+        				<%= card.addr %> / <%= card.addr2 %>
         			</span>
         		</div>
         	</div>
         </section>
+    	<%@ include file="nav.jsp" %>
     </body>
 </html>
