@@ -10,6 +10,7 @@
         <title>명함</title>
         <!-- 스타일 적용 -->
         <link href="reset.css" rel="stylesheet" />
+        <link href="global.css" rel="stylesheet" />
         <link href="inputForm.css" rel="stylesheet" />
     </head>
     <body>

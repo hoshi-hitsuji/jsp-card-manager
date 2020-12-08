@@ -16,7 +16,7 @@
         <!-- 스타일 적용 -->
         <link href="reset.css" rel="stylesheet" />
         <link href="global.css" rel="stylesheet" />
-        <link href="inputProc.css" rel="stylesheet" />
+        <link href="cardProc.css" rel="stylesheet" />
     </head>
     <body>
         <section class="container">
