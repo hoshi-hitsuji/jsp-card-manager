@@ -8,6 +8,7 @@
 <!-- request parameter 값의 인코딩 설정 -->
 <%request.setCharacterEncoding("utf-8");%>
 <%
+String id = request.getParameter("id");
 String name = request.getParameter("name");
 String position = request.getParameter("position");
 String tel = request.getParameter("tel");
@@ -23,7 +24,7 @@ try {
 	Class.forName("com.mysql.jdbc.Driver");
 	conn = DriverManager.getConnection(DB_URL, DB_ID, DB_PASSWD);
 	
-	String sql = "INSERT INTO `basicjsp`.`member` (`name`,`position`,`tel`,`email`,`addr`,`addr2`) VALUES (?,?,?,?,?,?);";
+	String sql = "UPDATE `basicjsp`.`member` SET `name`=?,`position`=?,`tel`=?,`email`=?,`addr`=?,`addr2`=? WHERE (`id`=?);";
 	
 	pstmt = conn.prepareStatement(sql);
 	pstmt.setString(1, name);
@@ -32,6 +33,7 @@ try {
 	pstmt.setString(4, email);
 	pstmt.setString(5, addr);
 	pstmt.setString(6, addr2);
+	pstmt.setString(7, id);
 	pstmt.executeUpdate();
 	
 	message = "success";

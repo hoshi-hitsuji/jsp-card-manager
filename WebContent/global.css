@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Nunito:wght@400;600;700&display=swap");
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f7fafc;
+    background-image: url(res/bg2.jpg);
+    background-size: cover;
+    font-family: "Noto Sans KR", sans-serif;
+    align-items: center;
+}
+a {
+	color: #48bb78;
+	text-decoration: none;
+}
+a:hover {
+	color: #48bb78;
+	text-decoration: underline;
+}
+.container {
+	background-color: white;
+    width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 15px;
+}
+.nav {
+	position: absolute;
+	background-color: white;
+    width: 150px;
+    margin: 0 auto;
+    padding: 2rem;
+    right: 1em;
+    border-radius: 15px;
+}
+.nav ul {
+	display: flex;
+	flex-direction: column;
+}
+.nav li {
+	padding: 0.2em 0;
+}
+.nav a {
+	display: block;
+	color: black;
+	padding: 1em 0;
+	text-align: center;
+}
+.glass {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    --webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+    border: 1px solid white;
+}
+.table {
+	width: 100%;
+	border: 1px solid white;
+	border-collapse: collapse;
+}
+.table th {
+	font-weight: 700;
+}
+.table td,.table th {
+	padding: 1em;
+	border: 1px solid white;
+}
+.table a {
+	text-decoration: none;
+	color: black;
+}
+.table a:hover {
+	text-decoration: underline;
+	color: black;
+}
